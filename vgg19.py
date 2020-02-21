@@ -16,7 +16,7 @@ from vgg_network import vgg19
 # os.environ['CUDA_VISIBLE_DEVICES'] = ''
 parser = argparse.ArgumentParser(description='DML on ImageNet')
 python_name = 'vgg19'
-save_base_root_check = './vgg19-imagenet'
+save_base_root_check = './vgg19-imagenet-testrun'
 parser.add_argument('--name', default='VGG19')
 parser.add_argument('--epochs', type=int, default=90, help='number of total epochs to run')
 parser.add_argument('--epoch_list', type=list, default=[30, 30, 30])
@@ -30,7 +30,7 @@ parser.add_argument('--weight_decay', type=float, default=1e-4, help='weight dec
 parser.add_argument('--cuda', type=int, default=1)
 parser.add_argument('--print_freq', type=int, default=100)
 
-parser.add_argument('--data', type=str, default='/home/jtcai/SharedSSD/Hsien/training') # need modified
+parser.add_argument('--data', type=str, default='/mnt/lustre/luozhipeng/data/ImageNet') # need modified
 
 parser.add_argument('--save_root', type=str, default=save_base_root_check)
 parser.add_argument('--TIMES', type=int, default=2)
